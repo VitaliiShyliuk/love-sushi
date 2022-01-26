@@ -1,0 +1,17 @@
+// footer to the bottom of the page
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+.App {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+// footer to the bottom of the page

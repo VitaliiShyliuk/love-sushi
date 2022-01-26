@@ -1,0 +1,188 @@
+@import "./styles/var.scss"; // variables
+@import "./styles/myNormalize.scss";
+@import "./styles/fonts.scss";
+@import "./styles/footerBottom.scss"; // footer to the bottom of the page
+@import "./styles/libs.scss"; // classes used in different other
+@import "./styles/components/MyButton.scss";
+@import "./styles/components/MyInput.scss";
+@import "./styles/components/MySlider.scss";
+@import "./styles/components/MyModal.scss";
+
+// position
+.header {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  border-bottom: 2px solid #9db802;
+  box-shadow: 0 3px #025b0e2f;
+  padding: 10px 0;
+  .container {
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .nav__column-links {
+        .nav__ul-links {
+          display: flex;
+          align-items: center;
+          .nav__li-link {
+            margin-left: 10px;
+            .cart-link {
+              .cart-link__has-products {
+                padding: 5px 10px;
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                background-color: $background-added;
+                transition-duration: 1s;
+              }
+              .cart-link__has-products:hover {
+                transform: scale(1.02);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// homepage
+.homepage {
+  padding-top: 50px;
+  padding-bottom: 80px;
+  .homepage__title {
+    text-align: center;
+  }
+}
+
+// products page
+.products {
+  margin-bottom: 80px;
+  .products-header {
+    margin: 5px;
+    .products-header__title {
+      margin: 20px 0 10px;
+    }
+    .products-header__input-search {
+      margin-bottom: 30px;
+    }
+  }
+}
+.products-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  .product {
+    padding: 15px;
+    border: 2px solid $border-color;
+    margin: 5px;
+    box-shadow: 3px 5px 2px #025b0e2f;
+    border-radius: 15px;
+
+    .product__content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .product__section {
+        display: flex;
+        flex-direction: column;
+        .product__title {
+          cursor: pointer;
+        }
+        .product__image {
+          cursor: pointer;
+        }
+        .product__description {
+          margin-bottom: 20px;
+        }
+      }
+      .product__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .product__buttons {
+          .button-add {
+            margin-left: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cart-page {
+  padding: 30px 30px 80px;
+  .clear-cart {
+    display: block;
+    margin: 0 0 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    width: 100px;
+    padding: 5px 10px;
+    background-color: rgb(206, 156, 156);
+    border: 2px solid rgb(255, 158, 158);
+    margin-bottom: 20px;
+  }
+  table {
+    margin: 0 auto;
+    text-align: center;
+    .table__text-left {
+      text-align: left;
+    }
+    .table__text-right {
+      text-align: right;
+    }
+    th, td{
+      padding: 10px;
+      border-bottom: 1px dashed #204429;
+    }
+  }
+}
+
+// footer
+.footer {
+  background-color: $footer-color;
+  padding: 20px 0;
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .footer__logo {
+      margin-bottom: 20px;
+    }
+    .social {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .social__title {
+        margin-bottom: 5px;
+      }
+      .social__list {
+        display: flex;
+        justify-content: center;
+        .social__item {
+          a {
+            .social__image {
+              margin: 0 5px;
+              width: 30px;
+            }
+          }
+        }
+      }
+    }
+    .info {
+      color: gray;
+      .info__row {
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

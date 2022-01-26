@@ -1,0 +1,34 @@
+
+%button {
+  padding: 6px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 2px solid;
+  border-color: #025b0e;
+  border-radius: 5px;
+  color: black;
+}
+
+.button-nav {
+  @extend %button;
+  display: block;
+  font-weight: 500;
+}
+
+.button-add {
+  @extend %button;
+  &:hover {
+    background-color: #9db802;
+    color: white;
+  }
+}
+
+.button-delete {
+  @extend %button;
+  &:hover {
+    background-color: #fd7c84;
+    color: white;
+  }
+}

@@ -1,0 +1,25 @@
+.container {
+  max-width: 800px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.content-container {
+  padding-top: 80px;
+}
+
+.logo__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .logo__img-brand {
+    position: relative;
+    left: 2px;
+  }
+}
+
+.close {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
