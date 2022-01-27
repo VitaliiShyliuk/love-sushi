@@ -5,12 +5,11 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 
-const Layout = (props) => {
-  const { cartItems} = props;
+const Layout = () => {
   return (
     <>
       <div className="content">
-        <Header cartItems={cartItems}/>
+        <Header/>
         <div className="content-container container">
           <Outlet />
         </div>

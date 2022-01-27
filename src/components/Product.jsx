@@ -1,23 +1,14 @@
-import React, { useMemo, useRef, useState } from "react";
+import React, { useContext, useMemo, useRef, useState } from "react";
+import { CartContext } from "../context";
+import ProductModal from "./ProductModal";
 import MyButton from "./UI/MyButton";
 import MyInput from "./UI/MyInput";
-import MyModal from "./UI/MyModal";
 
-const Product = ({
-  product,
-  addProductToCart,
-  removeProductInCart,
-  cartItems,
-}) => {
-  const [modalProduct, setModalProduct] = useState(false);
+const Product = ({ product }) => {
+  const { cartItems, setCartItems, addProductToCart, removeProductInCart } =
+    useContext(CartContext);
 
-  const openModalProduct = () => {
-    setModalProduct(true);
-  };
-
-  const closeModalProduct = () => {
-    setModalProduct(false);
-  };
+  const [visibleModalProduct, setVisibleModalProduct] = useState(false);
 
   const checkProductInCart = useMemo(() => {
     return cartItems.find((cartItem) => cartItem.id === product.id);
@@ -25,13 +16,17 @@ const Product = ({
 
   const countInput = useRef();
   const handleClickAdd = () => {
-    addProductToCart({
-      ...product,
-      qty: Number(countInput.current.value) || 1,
-    });
+    addProductToCart(
+      cartItems,
+      {
+        ...product,
+        qty: Number(countInput.current.value) || 1,
+      },
+      setCartItems
+    );
   };
   const handleClickRemove = () => {
-    removeProductInCart(product);
+    removeProductInCart(product, cartItems, setCartItems);
   };
   return (
     <div className="product">
@@ -40,13 +35,13 @@ const Product = ({
           <h3
             className="product__title"
             title="Подробнее"
-            onClick={openModalProduct}
+            onClick={() => setVisibleModalProduct(true)}
           >
             {product.name}
           </h3>
           <img
             title="Подробнее"
-            onClick={openModalProduct}
+            onClick={() => setVisibleModalProduct(true)}
             width={200}
             className="product__image"
             src={product.image}
@@ -93,31 +88,11 @@ const Product = ({
                 </MyButton>
               </>
             )}
-            <MyModal visible={modalProduct} setVisible={setModalProduct}>
-              <div className="modal-product">
-                <span
-                  className="modal-product__close close"
-                  onClick={() => closeModalProduct()}
-                >
-                  &#10006;
-                </span>
-                <h3 className="modal-product__title" title={product.name}>
-                  {product.name}
-                </h3>
-                <img
-                  title={product.name}
-                  className="modal-product__image"
-                  src={product.image}
-                  alt={product.name}
-                ></img>
-                <p className="product__description">
-                  <b>Описание:</b> {product.body}
-                </p>
-                <p className="product__description">
-                  <b>Энергетическая ценность 100г:</b> {product.details}
-                </p>
-              </div>
-            </MyModal>
+            <ProductModal
+              product={product}
+              visibleModalProduct={visibleModalProduct}
+              setVisibleModalProduct={setVisibleModalProduct}
+            />
           </div>
         </div>
       </div>

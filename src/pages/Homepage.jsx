@@ -4,7 +4,7 @@ import MySlider from "../components/UI/MySlider";
 import { stocks } from "../data/data";
 import { data } from "../data/data";
 
-const Homepage = ({ addProductToCart, removeProductInCart, cartItems }) => {
+const Homepage = () => {
   const [products, setProducts] = useState(data || []);
 
   return (
@@ -15,9 +15,6 @@ const Homepage = ({ addProductToCart, removeProductInCart, cartItems }) => {
       <ProductsList
         filteredProducts={products}
         className="products-list"
-        cartItems={cartItems}
-        removeProductInCart={removeProductInCart}
-        addProductToCart={addProductToCart}
       ></ProductsList>
     </div>
   );

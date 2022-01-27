@@ -4,11 +4,7 @@ import ProductsList from "../components/ProductsList";
 import MyInput from "../components/UI/MyInput";
 import { data } from "../data/data";
 
-const Productspage = ({
-  addProductToCart,
-  removeProductInCart,
-  cartItems,
-}) => {
+const Productspage = () => {
   const [products, setProducts] = useState(data || []);
   const [searchQuery, setSearchQuery] = useState("");
   const filteredProducts = useMemo(() => {
@@ -17,7 +13,7 @@ const Productspage = ({
         product.body.toLowerCase().includes(searchQuery.toLowerCase())
       );
     } else return products;
-  }, [products, cartItems, searchQuery]);
+  }, [products, searchQuery]);
 
   return (
     <div className="products">
@@ -31,7 +27,7 @@ const Productspage = ({
         onChange={(e) => setSearchQuery(e.target.value)}
       />
       </div>
-      <ProductsList className="products-list" filteredProducts={filteredProducts} cartItems={cartItems} removeProductInCart={removeProductInCart} addProductToCart={addProductToCart}/>
+      <ProductsList className="products-list" filteredProducts={filteredProducts} />
     </div>
   );
 };

@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../context";
 import MyButton from "./UI/MyButton";
 import MyInput from "./UI/MyInput";
 
-const CartItem = ({
-  cartItem,
-  minusQtyProductInCart,
-  plusQtyProductInCart,
-  removeProductInCart,
-  ...props
-}) => {
+const CartItem = ({ cartItem, ...props }) => {
+  const {
+    cartItems,
+    setCartItems,
+    removeProductInCart,
+    minusQtyProductInCart,
+    plusQtyProductInCart,
+    findProductInCart,
+  } = useContext(CartContext);
+
   return (
     <tr className="cart__item">
       <td>{props.index + 1}</td>
@@ -16,7 +20,15 @@ const CartItem = ({
       <td>
         <MyButton
           className="button-delete"
-          onClick={() => minusQtyProductInCart(cartItem)}
+          onClick={() =>
+            minusQtyProductInCart(
+              cartItems,
+              cartItem,
+              findProductInCart,
+              setCartItems,
+              removeProductInCart
+            )
+          }
         >
           -
         </MyButton>
@@ -24,7 +36,14 @@ const CartItem = ({
         <MyInput className="input-qty" value={cartItem.qty} disabled />
         <MyButton
           className="button-delete"
-          onClick={() => plusQtyProductInCart(cartItem)}
+          onClick={() =>
+            plusQtyProductInCart(
+              cartItems,
+              cartItem,
+              findProductInCart,
+              setCartItems
+            )
+          }
         >
           +
         </MyButton>
@@ -34,7 +53,7 @@ const CartItem = ({
       <td>
         <MyButton
           className="button-delete"
-          onClick={() => removeProductInCart(cartItem)}
+          onClick={() => removeProductInCart(cartItem, cartItems, setCartItems)}
         >
           Х
         </MyButton>

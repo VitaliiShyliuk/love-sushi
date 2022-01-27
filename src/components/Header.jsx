@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CartLink from "./CartLink";
 
-const Header = ({ cartItems }) => {
+const Header = () => {
   return (
     <header className="header">
       <div className="container">
@@ -24,7 +24,7 @@ const Header = ({ cartItems }) => {
                 <Link to="/products">Меню</Link>
               </li>
               <li className="nav__li-link">
-                <CartLink cartItems={cartItems} />
+                <CartLink />
               </li>
             </ul>
           </div>

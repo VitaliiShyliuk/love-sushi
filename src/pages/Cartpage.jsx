@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartItem from "../components/CartItem";
 import { Link } from "react-router-dom";
+import { CartContext } from "../context";
 
-const Cartpage = (props) => {
+const Cartpage = () => {
   const {
-    cartItems,
-    removeProductInCart,
-    minusQtyProductInCart,
-    plusQtyProductInCart,
-    setCartItems,
-  } = props;
+    cartItems, setCartItems
+  } = useContext(CartContext);
+
   if (!cartItems.length)
     return (
       <div className="cart-page">
@@ -38,9 +36,6 @@ const Cartpage = (props) => {
         <tbody>
           {cartItems.map((cartItem, index) => (
             <CartItem
-              removeProductInCart={removeProductInCart}
-              minusQtyProductInCart={minusQtyProductInCart}
-              plusQtyProductInCart={plusQtyProductInCart}
               index={index}
               cartItem={cartItem}
               key={cartItem.id}

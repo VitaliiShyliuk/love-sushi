@@ -1,12 +1,12 @@
-@import "./styles/var.scss"; // variables
-@import "./styles/myNormalize.scss";
-@import "./styles/fonts.scss";
-@import "./styles/footerBottom.scss"; // footer to the bottom of the page
-@import "./styles/libs.scss"; // classes used in different other
-@import "./styles/components/MyButton.scss";
-@import "./styles/components/MyInput.scss";
-@import "./styles/components/MySlider.scss";
-@import "./styles/components/MyModal.scss";
+@import "./var.scss"; // variables
+@import "./myNormalize.scss";
+@import "./fonts.scss";
+@import "./footerBottom.scss"; // footer to the bottom of the page
+@import "./libs.scss"; // classes used in different other
+@import "./components/MyButton.scss";
+@import "./components/MyInput.scss";
+@import "./components/MySlider.scss";
+@import "./components/MyModal.scss";
 
 // position
 .header {
