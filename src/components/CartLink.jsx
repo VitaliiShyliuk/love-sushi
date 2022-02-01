@@ -8,7 +8,7 @@ const CartLink = () => {
   if (!cartItems.length) {
     return (
       <Link className="cart-link__no-products" to="/cart">
-        <img width={30} height={30} src=".\images\basket.svg" />
+        <img width={30} height={30} src="images/icons/basket.svg" />
       </Link>
     );
   }

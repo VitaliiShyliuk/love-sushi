@@ -63,7 +63,6 @@
 .products {
   margin-bottom: 80px;
   .products-header {
-    margin: 5px;
     .products-header__title {
       margin: 20px 0 10px;
     }
@@ -71,13 +70,16 @@
       margin-bottom: 30px;
     }
   }
+  .product-category {
+    margin-bottom: 30px;
+  }
 }
 .products-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   .product {
     padding: 15px;
-    border: 2px solid $border-color;
+    border: 1px solid $border-color;
     margin: 5px;
     box-shadow: 3px 5px 2px #025b0e2f;
     border-radius: 15px;

@@ -12,7 +12,7 @@ const Header = () => {
               <img
                 className="logo__img-brand image-brand"
                 width={30}
-                src="./images/lovesushi.svg"
+                src="./images/icons/lovesushi.svg"
                 alt="lovesushi"
               />
               <span className="logo__title-brand title-brand">love&sushi</span>

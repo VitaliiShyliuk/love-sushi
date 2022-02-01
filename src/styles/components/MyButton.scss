@@ -1,11 +1,10 @@
-
 %button {
   padding: 6px 10px;
   cursor: pointer;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 700;
-  border: 2px solid;
+  border: 1px solid;
   border-color: #025b0e;
   border-radius: 5px;
   color: black;
@@ -30,5 +29,19 @@
   &:hover {
     background-color: #fd7c84;
     color: white;
+  }
+}
+
+.button-category {
+  @extend %button;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.5s;
+  background-color: white;
+  &.active {
+    position: relative;
+    top: -2px;
+    border: 3px solid #025b0e;
+    box-shadow: 1px 2px 1px #025b0e2f;
   }
 }

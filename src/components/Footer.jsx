@@ -11,7 +11,7 @@ const Footer = () => {
               <img
                 className="logo__img-brand image-brand"
                 width={30}
-                src="./images/lovesushi.svg"
+                src="./images/icons/lovesushi.svg"
                 alt="lovesushi"
               />
               <span className="logo__title-brand title-brand">love&sushi</span>
@@ -24,7 +24,7 @@ const Footer = () => {
                 <a title="Instagram" href="https://www.instagram.com/?hl=ru" target="_blank">
                   <img
                     className="social__image"
-                    src="./images/instagram.svg"
+                    src="./images/icons/instagram.svg"
                     alt="instagram"
                   />
                 </a>
@@ -33,7 +33,7 @@ const Footer = () => {
                 <a title="Facebook" href="https://www.facebook.com/" target="_blank">
                   <img
                     className="social__image"
-                    src="./images/facebook.svg"
+                    src="./images/icons/facebook.svg"
                     alt="facebook"
                   />
                 </a>

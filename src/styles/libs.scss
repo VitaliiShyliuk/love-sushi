@@ -23,3 +23,12 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+.category {
+  .category__button {
+    margin-left: 3px;
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+}

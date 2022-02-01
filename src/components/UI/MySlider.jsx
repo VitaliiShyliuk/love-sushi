@@ -4,7 +4,6 @@ const MySlider = (props) => {
   const { stocks } = props;
 
   const [slideIndex, setSlideIndex] = useState(0);
-  setTimeout(()=> {turnSlides(1)}, 10000);
 
   function turnSlides(n) {
     if (slideIndex + n > stocks.length - 1) {
