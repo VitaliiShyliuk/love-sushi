@@ -7,11 +7,6 @@ Main page:
 
 - V2. Products sort by categories.
 ![Categories](https://user-images.githubusercontent.com/71257918/152055606-7f2c97ca-25e7-4db8-afec-6a396a4ce97a.jpg)
-- V2. Add loader (during time to respond products from database)
-![Loader](https://user-images.githubusercontent.com/71257918/152056532-c4a3a03a-79c9-4258-b386-64e0862cdcdd.jpg)
-
-
-
 
 Cart:
 - Can input count of product before "add to cart" and in the top-right corner can see all products cost.
@@ -25,6 +20,11 @@ Products:
 ![Product](https://user-images.githubusercontent.com/71257918/151897152-a69365ef-2866-48be-b91a-f720e7c73b74.jpg)
 - On menu page is opportunity of searching.
 ![Product2](https://user-images.githubusercontent.com/71257918/151897303-e890f938-2767-44f0-b8a3-0b7ed1dd3bf2.jpg)
+
+
+- V2. Add loader (during time to respond products from database)
+![Loader](https://user-images.githubusercontent.com/71257918/152056733-7091fbcd-f264-4893-8143-4409d086b894.jpg)
+
 
 
 
