@@ -23,12 +23,12 @@ Products:
 
 
 - V2. Add loader (during time to respond products from database);
-![Loader](https://user-images.githubusercontent.com/71257918/152056733-7091fbcd-f264-4893-8143-4409d086b894.jpg)
+- ![Loader](https://user-images.githubusercontent.com/71257918/152056733-7091fbcd-f264-4893-8143-4409d086b894.jpg)
 
 
 
 
 
-Used API:Mock API - https://mockapi.io/docs (REST interface);
-React framework. Hooks used: useState, useMemo, useContext, useEffect;
+- Used API:Mock API - https://mockapi.io/docs (REST interface)
+- React framework. Hooks used: useState, useMemo, useContext, useEffect
 
